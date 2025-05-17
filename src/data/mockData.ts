@@ -60,8 +60,8 @@ export const mockTransactions: Transaction[] = [
   {
     id: '2',
     type: 'PURCHASE',
-    amount: -2.50,
-    description: 'Single journey ticket: Central Station to Riverside',
+    amount: -22.50,
+    description: 'Single journey ticket: Hebbal to Yelahanka',
     timestamp: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000) // 5 days ago
   },
   {
