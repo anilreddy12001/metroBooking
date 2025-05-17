@@ -1,11 +1,64 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ArrowUpRight, ArrowDownRight, RotateCcw, Calendar } from 'lucide-react';
 import { useAppContext } from '../context/AppContext';
 import { Transaction } from '../types';
+import { collection, doc, getDoc, getDocs, setDoc, query, updateDoc, deleteDoc, where } from "firebase/firestore";
+import { db } from "../utils/firebase";
 
 const TransactionHistory: React.FC = () => {
   const { transactions } = useAppContext();
 
+useEffect(()=>{
+  fetchPost();//Fetching data from google firebase realtime db
+})
+  const fetchPost = (defaultData) => {
+    
+    if (defaultData != 'defaultData') {
+
+      getDocs(collection(db, "CustomIcons"))
+        .then((querySnapshot) => {
+          //console.log('received db data from google firebase db..', querySnapshot);
+          const newData = querySnapshot.docs
+            .map((doc) => ({ ...doc.data(), id: doc.id }));
+          //console.log("data2: ", data2);
+          var data2={rowData:[]};
+          newData.forEach((item, index) => {
+            if (newData[index] && newData[index].id != 'headerData') {
+
+              data2.rowData.push({ country: newData[index].country, state: newData[index].state, name: newData[index].name, id: newData[index].id, description: newData[index].description });
+            }
+            else {
+              
+            }
+
+          });
+          //data2.components[0].description = newData[0].name;
+          console.log('data: ', data2);
+          
+
+
+          // setTodos(newData);                
+          console.log("new data: ", newData);
+
+          
+        }).catch(e => {
+
+        })
+    }
+    else {
+
+      getDocs(collection(db, "openCollection"))
+        .then((querySnapshot) => {
+          //console.log('received db data from google firebase db..', querySnapshot);
+          const newData = querySnapshot.docs
+            .map((doc) => ({ ...doc.data(), id: doc.id }));
+          console.log('open collection data:', newData);
+        });
+
+    }
+
+
+  }
   const formatDate = (date: Date): string => {
     return new Intl.DateTimeFormat('en-US', {
       month: 'short',

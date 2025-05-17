@@ -5,6 +5,7 @@ import BookingForm from './components/BookingForm';
 import TransactionHistory from './components/TransactionHistory';
 import { db } from "./utils/firebase";
 function App() {
+  console.log("db:",db);
   return (
     <AppProvider>
       <div className="min-h-screen bg-gray-100">
