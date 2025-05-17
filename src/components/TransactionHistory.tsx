@@ -63,7 +63,7 @@ const TransactionHistory: React.FC = () => {
                         ? 'text-red-600' 
                         : 'text-green-600'
                     }`}>
-                      {transaction.amount < 0 ? '-' : '+'}${Math.abs(transaction.amount).toFixed(2)}
+                      {transaction.amount < 0 ? '-' : '+'}INR {Math.abs(transaction.amount).toFixed(2)}
                     </span>
                   </div>
                   <p className="text-sm text-gray-500 mt-1">{transaction.description}</p>

@@ -46,18 +46,18 @@ const AddFundsModal: React.FC<AddFundsModalProps> = ({ onClose }) => {
                   className={`py-3 rounded-md border ${
                     amount === preset
                       ? 'bg-blue-600 text-white border-blue-600'
-                      : 'border-gray-300 hover:border-blue-400'
+                      : 'border-gray-300 text-black hover:border-blue-400'
                   } transition-colors`}
                   onClick={() => setAmount(preset)}
                 >
-                  ${preset}
+                  INR {preset}
                 </button>
               ))}
             </div>
             
             <label className="block text-gray-700 mb-2 font-medium">Or Enter Custom Amount</label>
             <div className="relative">
-              <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-600">$</span>
+              <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-600">INR </span>
               <input
                 type="number"
                 min="1"
@@ -99,7 +99,7 @@ const AddFundsModal: React.FC<AddFundsModalProps> = ({ onClose }) => {
             ) : (
               <>
                 <CreditCard className="mr-2 h-5 w-5" />
-                Add ${amount.toFixed(2)} to Wallet
+                Add INR {amount.toFixed(2)} to Wallet
               </>
             )}
           </button>

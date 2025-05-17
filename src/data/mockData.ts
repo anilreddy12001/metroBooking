@@ -2,20 +2,20 @@ import { Station, TicketType, Transaction, User } from '../types';
 
 export const mockUser: User = {
   id: '1',
-  name: 'Alex Johnson',
-  email: 'alex@example.com',
+  name: 'Anil Kumar',
+  email: 'anilreddy12001@gmail.com',
   walletBalance: 120.50
 };
 
 export const mockStations: Station[] = [
-  { id: '1', name: 'Central Station', lines: ['Red', 'Blue'] },
-  { id: '2', name: 'Riverside', lines: ['Red', 'Green'] },
-  { id: '3', name: 'Market Square', lines: ['Blue'] },
-  { id: '4', name: 'Tech District', lines: ['Green', 'Yellow'] },
-  { id: '5', name: 'Harbor View', lines: ['Yellow'] },
-  { id: '6', name: 'Westside Mall', lines: ['Red', 'Yellow'] },
-  { id: '7', name: 'University', lines: ['Green', 'Blue'] },
-  { id: '8', name: 'Airport Terminal', lines: ['Express', 'Blue'] },
+  { id: '1', name: 'Hebbal', lines: ['Red', 'Blue'] },
+  { id: '2', name: 'Kodigehalli', lines: ['Red', 'Green'] },
+  { id: '3', name: 'Jakkur Cross', lines: ['Blue'] },
+  { id: '4', name: 'Yelahanka', lines: ['Green', 'Yellow'] },
+  { id: '5', name: 'Bagalur Cross', lines: ['Yellow'] },
+  { id: '6', name: 'Doddajala', lines: ['Red', 'Yellow'] },
+  { id: '7', name: 'Airport City', lines: ['Green', 'Blue'] },
+  { id: '8', name: 'KIAL Terminals', lines: ['Express', 'Blue'] },
 ];
 
 export const mockTicketTypes: TicketType[] = [
@@ -23,28 +23,28 @@ export const mockTicketTypes: TicketType[] = [
     id: '1',
     name: 'Single Journey',
     description: 'Valid for one journey between two stations',
-    price: 2.50,
+    price: 50,
     validity: '2 hours'
   },
   {
     id: '2',
     name: 'Day Pass',
     description: 'Unlimited travel for the entire day',
-    price: 8.00,
+    price: 200.00,
     validity: '24 hours'
   },
   {
     id: '3',
     name: 'Weekly Pass',
     description: 'Unlimited travel for 7 days',
-    price: 35.00,
+    price: 1000.00,
     validity: '7 days'
   },
   {
     id: '4',
     name: 'Monthly Pass',
     description: 'Unlimited travel for 30 days',
-    price: 120.00,
+    price: 3500.00,
     validity: '30 days'
   }
 ];

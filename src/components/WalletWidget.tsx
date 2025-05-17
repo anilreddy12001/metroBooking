@@ -14,7 +14,7 @@ const WalletWidget: React.FC = () => {
         onClick={() => setShowAddFunds(true)}
       >
         <Wallet className="h-4 w-4" />
-        <span className="font-medium">${user.walletBalance.toFixed(2)}</span>
+        <span className="font-medium">INR {user.walletBalance.toFixed(2)}</span>
         <Plus className="h-4 w-4" />
       </div>
       

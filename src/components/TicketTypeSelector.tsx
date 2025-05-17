@@ -40,7 +40,7 @@ const TicketTypeSelector: React.FC = () => {
               <div className="flex-1">
                 <div className="flex justify-between items-start">
                   <h4 className="font-medium text-gray-900">{type.name}</h4>
-                  <span className="font-semibold text-gray-900">${type.price.toFixed(2)}</span>
+                  <span className="font-semibold text-gray-900">INR {type.price.toFixed(2)}</span>
                 </div>
                 <p className="text-sm text-gray-500 mt-1">{type.description}</p>
                 <div className="flex items-center mt-2 text-sm text-gray-600">

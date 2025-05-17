@@ -27,7 +27,7 @@ function App() {
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="mb-4 md:mb-0">
                 <div className="flex items-center space-x-2">
-                  <span className="font-bold text-blue-600">MetroGo</span>
+                  <span className="font-bold text-blue-600">Blu</span>
                   <span className="text-gray-500">© 2025 All Rights Reserved</span>
                 </div>
               </div>
