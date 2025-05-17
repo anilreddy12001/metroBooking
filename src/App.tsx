@@ -3,7 +3,7 @@ import { AppProvider } from './context/AppContext';
 import Header from './components/Header';
 import BookingForm from './components/BookingForm';
 import TransactionHistory from './components/TransactionHistory';
-
+import { db } from "./utils/firebase";
 function App() {
   return (
     <AppProvider>

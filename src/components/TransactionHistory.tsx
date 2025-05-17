@@ -28,7 +28,7 @@ const TransactionHistory: React.FC = () => {
     }
   };
 
-  console.log("import.meta.env.VITE_API_BASE_URL:",import.meta.env);
+//  console.log("import.meta.env.VITE_API_BASE_URL:", import.meta.env);//import.meta.env
 
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden">
