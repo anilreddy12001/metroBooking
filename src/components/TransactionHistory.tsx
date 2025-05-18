@@ -15,7 +15,7 @@ useEffect(()=>{
     
     if (defaultData != 'defaultData') {
 
-      getDocs(collection(db, "CustomIcons"))
+      getDocs(collection(db, "loginLogs"))
         .then((querySnapshot) => {
           //console.log('received db data from google firebase db..', querySnapshot);
           const newData = querySnapshot.docs
@@ -33,12 +33,12 @@ useEffect(()=>{
 
           });
           //data2.components[0].description = newData[0].name;
-          console.log('data: ', data2);
+         // console.log('data: ', data2);
           
 
 
           // setTodos(newData);                
-          console.log("new data: ", newData);
+          //console.log("new data: ", newData);
 
           
         }).catch(e => {
