@@ -1,3 +1,4 @@
-# metroBooking
-
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/anilreddy12001/metroBooking)
+MetroBooking app
+Displays stations along the line, allows booking ticket and validates wallet balance. 
+live at:
+https://metrobooking.netlify.app/
